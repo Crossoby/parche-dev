@@ -15,15 +15,16 @@
             <li><a href="conducta.html">Conducta</a></li>
             <li><a href="inscripcion.html">inscripcion</a></li>
             <li><a href="ponentes.html">Ponentes</a></li>
-            
+
         </ul>
     </nav>
     </header>
-    <main id = "Contenido">
+    <main id="Contenido">
         <h1>Inscripcion</h1>
         <p>La entrada es gratuita y los cupos son limitados. Completa el formulario para reservar el tuyo. <br>
         Los campos marcados con * son obligatorios.</p>
         <fieldset>
+            <legend><h2>Tus datos</h2></legend>
             <form action="gracias.html" method="get">
                 <div>
                     <label for="nombre">Nombre Completo: * </label>
@@ -31,23 +32,97 @@
                 </div>
                 <div>
                     <label for="correo">Correo electronico: *</label>
-                    <input type="mail" id="correo" name="correo" required>
+                    <input type="email" id="correo" name="correo" required>
                 </div>
                 <div>
-                    <label for="telefono">celular: </label>
-                    <input type="tel" id="telefono" name="telefono" required>
+                    <label for="telefono">Celular: </label>
+                    <input type="tel" id="telefono" name="telefono" required pattern="3[0-9]{9}">
                 </div>
-                <div>
-                    <label for="ciudad">Ciudad :</label>
-                    <select name="" id=""></select>
-                </div>
-        <fieldset></fieldset>
-        </fieldset>
+            <label for="ciudad">Ciudad</label required>
+                <select id="ciudad" name="ciudad">
+                    <option value="" selected disabled>Selecciona tu ciudad</option>
+                    <option value="medellin">Medellin</option>
+                    <option value="bello">Bello</option>
+                    <option value="itagüi">Itagüi</option>
+                    <option value="envigado">Envigado</option>
+                    <option value="sabaneta">Sabaneta</option>
+                    <option value="barbosa">Barbosa</option>
+                    <option value="la-estrella">La estrella</option>
+                    <option value="caldas">Caldas</option>
+                    <option value="copacabana">Copacabana</option>
+                    <option value="girardota">Giradota</option>
+                    <option value="otra">Otra</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="momento"></label>
+                <legend><h2>¿En que momento estas?</h2></legend>
+                    <select name="momento" id="momento" required>
+                        <option value="" selected disabled>Selecciona tu momento</option>
+                        <option value="empezando">Estoy empezando a programar</option>
+                        <option value="no-trabajo">Ya programo pero no trabajo en tecnologia</option>
+                        <option value="trabajo">Trabajo en tecnologia </option>
+                    </select>
+            </fieldset>
+            <fieldset>
+                <legend><h2>¿Que temas te interesan?</h2></legend>
+                <label>
+                    <input type="checkbox" name = "temas" value = "desarrollo">
+                    Desarrollo web
+                </label>
+                <label>
+                    <input type="checkbox" name = "temas" value = "datos">
+                    Datos y SQL
+                </label>
+                <label>
+                    <input type="checkbox" name = "temas" value = "accesibilidad">
+                    Accesibilidad
+                </label>
+                <label>
+                    <input type="checkbox" name = "temas" value = "python">
+                    Python
+                </label>
+                <label>
+                    <input type="checkbox" name = "temas" value = "nube">
+                    Despliegue en la nube
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend><h2>Agenda</h2></legend>
+                <label>
+                    <input type="checkbox" name = "taller" value = "taller">
+                    Quiero inscribirme al taller: "Tu primer bot con python" (30 cupos trae tu computador)
+                </label> <br>
+                <label for="talla">Talla de camiseta</label>
+                    <select name="talla" id="talla">
+                        <option value="" selected disabled>Selecciona tu talla</option>
+                        <option value="xs">XS</option>
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                    </select>
+                    <legend><h4>¿Que esperas aprender de Parche Dev? (maximo 300 caracteres)</h4></legend>
+                    <label for="aprendizaje"></label>
+                    <textarea name="aprendizaje" id="aprendizaje" maxlength = "300"></textarea>
+                    <div>
+                        <label for="conducta">Acepta el codigo de conducta: * 
+                            <input type="checkbox"  required>
+                            <a href="conducta.html">Conducta</a> <br>
+                        </label>
+                        <label for="reserva">Reserva tu cupo:
+                            <select name="reserva" id="reserva">
+                                <option value="" selected disabled>Selecciona</option>
+                                <option value="reservar">Reservar mi cupo</option>
+                            </select>
+                        </label>
+                    </div>
+            </fieldset>
         </form>
     </main>
     <footer>¿Preguntas? Escríbenos a <a href="mailto:hola@parche.example">hola@parche.example</a>
     Parche Dev 2026 · Medellín,<br>Colombia
     Parche Dev es un evento ficticio creado como reto de formación.</footer>
-</body>
 </body>
 </html>
